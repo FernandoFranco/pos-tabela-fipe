@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela FIPE</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Tabela FIPE</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="#/motos">Motos</a>
+      </li>
+
+      <li>
+        <a href="#/carros">Carros</a>
+      </li>
+      
+      <li>
+        <a href="#/caminhoes">Caminhões</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section aria="search">
+    <form>
+      <fieldset id="brands">
+        <legend>Marca:</legend>
+        <select></select>
+      </fieldset>
+
+      <fieldset id="models">
+        <legend>Modelo:</legend>
+        <select></select>
+      </fieldset>
+
+      <fieldset id="years">
+        <legend>Ano:</legend>
+        <select></select>
+      </fieldset>
+    </form>
+  </section>
+
+  <main style="display: none;">
+    <table>
+      <tr>
+        <th>Código FIPE</th>
+        <td id="CodigoFipe"></td>
+      </tr>
+
+      <tr>
+        <th>Combustivel</th>
+        <td>
+          <span id="SiglaCombustivel"></span>
+          <span id="Combustivel"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <th>Mes de referencia</th>
+        <td id="MesReferencia"></td>
+      </tr>
+
+      <tr>
+        <th>Valor</th>
+        <td id="Valor"></td>
+      </tr>
+    </table>
+  </main>
+
+  <footer>
+    <div>
+      Desenvolvedor: Fernando Henrique Alves Franco
+    </div>
+    <div>
+      Créditos à:
+      <a href="https://deividfortuna.github.io/fipe">FIPE API HTTP REST</a>
+      por disponibilizar a API
+    </div>
+  </footer>
+
+  <script src="app.js" async></script>
+</body>
+</html>

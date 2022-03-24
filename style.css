@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body {
+  margin: 0;
+  padding-bottom: 64px;
+  background-color: #212121;
+  font-family: 'Quicksand', sans-serif;
+}
+
+header {
+  height: 384px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+header#motos {
+  background-image: url(img/motorcycles.webp);
+}
+header#carros {
+  background-image: url(img/cars.webp);
+}
+header#caminhoes {
+  background-image: url(img/trucks.webp);
+}
+
+header::before {
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, transparent, #212121);
+}
+
+header > h1 {
+  width: 100%;
+  bottom: 64px;
+  color: white;
+  position: absolute;
+  text-align: center;
+}
+
+nav {
+  margin: 0 auto;
+  max-width: 1024px;
+  position: relative;
+  transform: translateY(-50%);
+}
+nav > ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+nav > ul > li > a {
+  height: 64px;
+  display: flex;
+  min-width: 128px;
+  border: solid 2px;
+  align-items: center;
+  border-radius: 16px;
+  text-decoration: none;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 300ms;
+}
+nav > ul > li > a:hover {
+  transform: scale(1.1);
+  color: rgba(255, 255, 255, 0.75);
+}
+nav > ul > li > a.active {
+  color: white;
+  transform: scale(1.2);
+}
+
+section {
+  max-width: 1024px;
+  margin: 16px auto 0;
+}
+section > form {
+  display: flex;
+  padding: 0 16px;
+  justify-content: space-around;
+}
+section > form > fieldset {
+  width: 100%;
+  margin: 0 16px;
+  min-width: 128px;
+  position: relative;
+  padding: 0 16px 8px;
+  border-radius: 24px;
+  background-color: #212121;
+}
+section > form > fieldset > legend {
+  color: white;
+}
+section > form > fieldset > select {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  outline: none;
+  color: white;
+  background-color: #212121;
+}
+section > form > fieldset > select:disabled {
+  color: rgba(255, 255, 255, 0.32);
+}
+
+main {
+  padding: 0 32px;
+  max-width: 1024px;
+  margin: 32px auto 0;
+  box-sizing: border-box;
+}
+main > table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+table tr th,
+table tr td {
+  width: 50%;
+  height: 32px;
+  color: white;
+  padding: 0 16px;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+table tr:first-child th,
+table tr:first-child td {
+  border-top: 1px solid white;
+}
+table tr th {
+  text-align: left;
+  border-left: 1px solid white;
+}
+table tr:first-child th {
+  border-top-left-radius: 16px;
+}
+table tr:first-child td {
+  border-top-right-radius: 16px;
+}
+table tr:last-child th {
+  border-bottom-left-radius: 16px;
+}
+table tr:last-child td {
+  border-bottom-right-radius: 16px;
+}
+table #SiglaCombustivel {
+  width: 32px;
+  color: #212121;
+  margin-right: 8px;
+  text-align: center;
+  border-radius: 16px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  color: white;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer a {
+  color: yellow;
+}
